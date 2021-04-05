@@ -1,0 +1,399 @@
+@import "../../../public/assets/scss/variables.scss";
+
+.bannerRight {
+  overflow: hidden;
+  text-align: right;
+  & img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+.bannerLeft {
+  & h1 {
+    font-family: "ObjectSans-Bold";
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 96.5%;
+    display: flex;
+    align-items: center;
+
+    /* media queries */
+    @media (max-width: 767px) {
+      font-size: 65px;
+    }
+  }
+  & p {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 132%;
+    display: flex;
+    align-items: center;
+    color: $paracolorBlack;
+  }
+  & a,
+  a:hover {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: $colorBlack;
+  }
+}
+.btn.btnYellow,
+.btn.btnYellow:hover {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background: $secondary-color;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  color: $colorBlack;
+  padding: 12px 15px;
+}
+.headbelowSame {
+  font-family: "ObjectSans-Bold";
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $paracolorBlack;
+}
+/*cards*/
+.cardsBanner {
+  position: relative;
+  z-index: 9;
+  & .card {
+    background: linear-gradient(
+        180deg,
+        rgba(221, 221, 221, 0.248) 0%,
+        rgba(255, 255, 255, 0.8) 100%
+      ),
+      $primary-color;
+    box-shadow: 2.40426px 3.1968px 7px rgba(8, 12, 35, 0.07),
+      0.5px 0.6px 1.2px rgba(8, 12, 35, 0.035);
+    border-radius: 5px;
+    border: none;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+    z-index: 99;
+  }
+  & .card img {
+    height: 44px;
+    width: auto;
+    object-fit: cover;
+  }
+
+  & .card-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $colorBlack;
+    margin-top: 30px;
+  }
+  & .card-subtitle {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $paracolorBlack;
+  }
+}
+
+.advantage {
+  position: relative;
+  width: 100%;
+  // margin-top: -8%;
+  padding: 9% 0%;
+  padding-bottom: 20px;
+
+  & .card {
+    background: transparent;
+    box-shadow: none;
+    padding: 15px;
+
+    /* media queries */
+    @media screen and (max-width: 767px) {
+      padding: 0px;
+      margin-bottom: 0px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      padding: 15px 0px;
+    }
+  }
+  & .card-title {
+    font-family: "CodecPro-Bold";
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $colorBlack;
+
+    /* media queries */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      font-size: 20px;
+    }
+  }
+  & .card-text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $paracolorBlack;
+  }
+  /* media queries */
+  @media (max-width: 767px) {
+    margin-top: 6%;
+  }
+}
+
+/*trading*/
+.trading {
+  overflow: hidden;
+
+  & .parasame {
+    width: 71%;
+
+    /* media queries */
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
+/*farmers team*/
+.cardTeam {
+  position: relative;
+
+  & .card.cardEven {
+    background: $primary-color;
+    box-shadow: 0px 5px 20px rgba(0, 18, 80, 0.1);
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 15%;
+  }
+  & .cardStar {
+    position: absolute;
+    right: 7%;
+    top: -6%;
+  }
+  & .cardLetter {
+    background: #f5f5f5;
+    border-radius: 20px;
+
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    justify-content: center;
+    color: $colorBlack;
+    padding: 38px 0px;
+    display: flex;
+    width: 43%;
+    margin: 0 auto 30px;
+  }
+  & .card-title {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 49px;
+    text-align: center;
+    color: $colorBlack;
+    margin-bottom: 30px;
+  }
+  & ul li {
+    list-style-type: none;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: $paracolorBlack;
+    margin-bottom: 10px;
+  }
+  & .cardPara {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    justify-content: center;
+    color: $paracolorBlack;
+
+    & span {
+      color: $secondary-color;
+    }
+  }
+
+  & .cardPara1 {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 22px;
+    display: flex;
+    justify-content: flex-start;
+    color: $paracolorBlack;
+  }
+
+  & .card.cardOdd {
+    border: 2px solid #b7b7b7;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: transparent;
+
+    & .cardLetter {
+      background: rgba(219, 219, 219, 0.3);
+    }
+    & .card-title {
+      font-size: 32px;
+      line-height: 37px;
+    }
+    & .btn.btnYellow {
+      background: $secondary-color;
+      box-shadow: 0px 5px 20px rgba(0, 18, 80, 0.1);
+      border-radius: 5px;
+      padding: 10px 25px;
+    }
+  }
+
+  & .card {
+    /* media queries */
+    @media (max-width: 320px) {
+      width: 18rem !important;
+      margin: auto;
+    }
+
+    /* media queries */
+    @media screen and (min-width: 321px) and (max-width: 1023px) {
+      width: 20rem !important;
+      margin: auto;
+    }
+  }
+}
+.borderCurve {
+  border-radius: 0% 0% 200vh 200vh / 0% 0% 35vh 35vh;
+  background: $primary-color;
+  height: 50px;
+  width: 100%;
+  display: block;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+}
+
+/*token*/
+
+.toeknImg img {
+  max-width: 100%;
+}
+.tokenRIght h5 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 133%;
+  color: $colorBlack;
+}
+
+/*community*/
+
+.community {
+  background: $paracolorBlack;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & h4 {
+    font-family: "ObjectSans-Bold";
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffca00;
+
+    /* media queries */
+    @media (max-width: 767px) {
+      font-size: 26px;
+      line-height: 36px;
+    }
+  }
+  & p {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a8a8a8;
+  }
+  & ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & ul li {
+    list-style-type: none;
+    margin: 20px;
+  }
+}
+
+/*footer*/
+footer {
+  background: $colorBlack;
+}
+
+.footHead h4 {
+  font-family: "CodecPro-Bold";
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 133%;
+  color: $primary-color;
+}
+.footcol {
+  & p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 137%;
+    color: $primary-color;
+  }
+
+  & ul li {
+    list-style-type: none;
+
+    & a,
+    & a:hover {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 170%;
+      color: $primary-color;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
+  }
+  /* media queries */
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tradingrightImg {
+    overflow: hidden;
+    margin-top: 50px;
+
+    & img {
+      max-width: 100%;
+    }
+  }
+}

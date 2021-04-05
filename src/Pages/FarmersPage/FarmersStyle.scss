@@ -1,0 +1,211 @@
+@import "../../../public/assets/scss/variables.scss";
+
+.bgColor {
+  background-color: $greybody !important;
+}
+
+.navbanHead {
+  background-color: $secondary-color;
+  border-bottom-right-radius: 50% 41px;
+  border-bottom-left-radius: 50% 41px;
+
+  & h1 {
+    font-family: "ObjectSans-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 46px;
+    text-align: center;
+    color: $colorBlack;
+
+    /* media queries */
+    @media (max-width: 767px) {
+      font-size: 26px;
+    }
+  }
+}
+
+.selectdrop {
+  position: relative;
+  margin-right: 9px;
+
+  & img {
+    position: absolute;
+    right: -11%;
+    top: 17px;
+  }
+}
+select.form-control {
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: $paracolorBlack;
+  background: transparent;
+  border: none;
+  padding: 5px 24px 5px 13px;
+}
+
+.tablebg {
+  background: #fff;
+  border-radius: 5px 5px 0px 0px;
+  margin-top: -5%;
+  padding: 20px 3px;
+  text-align: center;
+  & .table {
+    & thead th {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+      color: $tablehead;
+      border: none !important;
+      padding: 10px 10px 30px;
+    }
+    & tbody tr {
+      border-top: 1px solid #ededf2;
+    }
+
+    & tbody tr td {
+      vertical-align: middle;
+      padding: 20px 0px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: $colorBlack;
+    }
+    & .nodata {
+      color: $tablehead;
+    }
+    & tbody tr .spanname {
+      background: #f5f5f5;
+      border-radius: 10px;
+      padding: 20px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $colorBlack;
+    }
+
+    & tbody tr .spanbold {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: $colorBlack;
+    }
+
+    .fontlighBold {
+      font-weight: 500;
+    }
+
+    .fontlight {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: $tablehead;
+      padding-top: 7px;
+      display: inline-block;
+    }
+    .fontdBold {
+      font-weight: bold;
+    }
+    .rowData {
+      font-family: "ObjectSans-Bold";
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 116%;
+      color: #070602;
+    }
+    .btn.btnPadding,
+    .btn.btnPadding span {
+      padding: 15px 30px !important;
+      font-weight: normal !important;
+      font-family: Roboto;
+    }
+  }
+}
+
+.pageTable {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 137%;
+  color: $paracolorBlack;
+  text-align: left;
+  float: left !important;
+  padding: 8px 20px;
+}
+.paginationTable {
+  display: inline-block;
+
+  & .page-link,
+  .page-link:hover {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 137%;
+    color: $paracolorBlack;
+    border: none;
+    background-color: transparent;
+  }
+
+  & .page-item.active {
+    & .page-link {
+      border: 1px solid #070602;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background-color: transparent;
+      color: $paracolorBlack;
+    }
+  }
+}
+
+.pagePosition {
+  position: relative;
+}
+
+.dropTable {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 137%;
+  color: $paracolorBlack;
+  display: inline-block;
+  float: right;
+  padding: 0px 20px;
+  position: relative;
+
+  /* media queries */
+  @media (max-width: 900px) {
+    float: none;
+    padding: 0px 12px;
+    position: absolute;
+    bottom: 51%;
+    right: 0;
+  }
+
+  & span {
+    position: absolute;
+    right: 4px;
+    top: 14px;
+  }
+
+  & .form-group {
+    display: inline-block;
+    background: #dddddd;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 137%;
+    margin-left: 10px;
+    color: $paracolorBlack;
+  }
+  & select.form-control {
+    padding: 5px 28px 5px 10px;
+  }
+}

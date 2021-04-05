@@ -1,0 +1,178 @@
+.pool_value {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.investment_title {
+    font-size: 20px;
+}
+
+.performance_title {
+    font-size: 12px;
+    text-align: right;
+}
+
+.performance_title_icon {
+    color: rgba(0,0,0,0.6);
+    top: -2px;
+    position: relative;
+}
+
+.graph_duration {
+    font-weight: 500;
+    cursor: pointer;
+    &.active {
+        font-weight: 700;
+        border-bottom: 3px solid #222;
+    }
+}
+.graph_date {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.graph_date_sub {
+    color: rgba(34,34,34,0.6);
+}
+
+.tab_item {
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 5px;
+    @media screen and (min-width: 400px) {
+        margin-right: 50px;
+    }
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s linear;
+    &:hover {
+        border-bottom: 4px solid #222;
+    }
+    &.active {
+        border-bottom: 4px solid #222;
+    }
+}
+.tab_item_icon {
+    margin-right: 4px;
+}
+.tab_item_text {
+    font-weight: bold;
+}
+
+.tabssection {
+    background-color: #F4F4F4;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 1rem;
+}
+
+.post_first {
+    background-color: rgba(245,245,245,1);
+    border-radius: 10px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post_author {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.post_author_designation {
+    margin: 0;
+    color: rgba(34,34,34,0.4);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.post_btn {
+    border : 1px solid rgba(193,193,193,1);
+    border-radius: 2px;
+    padding: 14px 40px;
+    font-size: 14px;
+    background: transparent;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.post_content {
+    margin-top: 15px;
+}
+
+.post_comments, .post_likes {
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+    svg {
+        margin-right: 0.5rem;
+    }
+}
+
+.strategycard {
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.strategycard_image {
+    background-color: #fff;
+    min-height: 294px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.strategycard_content {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+.strategycard_body {
+    background-color: rgba(255,255,255,.6);
+}
+
+.strategycard_meta {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.strategycard_title {
+    margin-top: 35px;;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.strategycard2_title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.deposit-row{
+    td {
+        padding: 30px 0 !important;
+        min-width: 200px;
+    }
+}
+.deposit-hash {
+    font-weight: bold;
+    border-bottom: 1px solid rgba(172,172,172,1);
+}

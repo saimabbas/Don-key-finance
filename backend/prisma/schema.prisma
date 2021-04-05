@@ -1,0 +1,195 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["createMany"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model ProtocolActionProperties {
+  id          Int     @id @default(autoincrement())
+  actionId    Int?
+  name        String?
+  actionType  Int?
+  optionsJSON String?
+  description String?
+  required    Int?
+}
+
+model ProtocolActions {
+  id          Int        @id @default(autoincrement())
+  protocolId  Int?
+  name        String?
+  description String?
+  icon        String?
+  Protocols   Protocols? @relation(fields: [protocolId], references: [id])
+
+  @@index([protocolId], name: "protocol")
+}
+
+model Protocols {
+  id                         Int                          @id @default(autoincrement())
+  name                       String?
+  website                    String?
+  toolbarImageURL            String?
+  showOnToolbar              String?
+  edgeColor                  String?
+  description                String?
+  vertexImageURL             String?
+  mediumImageURL             String?
+  actions                    ProtocolActions[]
+  protocol_category_relation protocol_category_relation[]
+}
+
+model Strategies {
+  id               Int       @id @default(autoincrement())
+  name             String?
+  data_open        DateTime?
+  earnings         Int?
+  json             String?
+  earnings_per     Int?
+  allocation       Int?
+  profit           Int?
+  last_transaction Int?
+  apy              Int?
+  buru_token       Int?
+  status           Int?
+  createdAt        DateTime
+  updatedAt        DateTime
+  userId           Int?
+  Users            Users?    @relation(fields: [userId], references: [id])
+
+  @@index([userId], name: "User_Strategy_FK")
+}
+
+model Users {
+  id                  Int                     @id @default(autoincrement())
+  walletAddress       String?                 @unique
+  createdAt           DateTime?               @default(now())
+  updatedAt           DateTime?               @default(now())
+  avatarURL           String?
+  username            String?
+  description         String?
+  GUID                String                  @unique
+  buru_token_minted   Int?
+  firstname           String?
+  middlename          String?
+  lastname            String?
+  gender              String?
+  birthdate           DateTime?
+  address             String?
+  city                String?
+  postalcode          String?
+  country             String?
+  birthsameascitizen  Boolean?
+  passportnum         String?
+  exp_equities        Users_exp_equities?
+  exp_crypto          Users_exp_crypto?
+  exp_leveraged       Users_exp_leveraged?
+  farmer_knowledge    Users_farmer_knowledge?
+  planned_investments String?
+  farmer_strategy     String?
+  farmer_purpose      String?
+  risk_limit          String?
+  income_sources      String?
+  streetNo            String?
+  Strategies          Strategies[]
+}
+
+model notifications {
+  id           Int      @id @default(autoincrement())
+  notification String?
+  createdAt    DateTime
+  updatedAt    DateTime
+}
+
+model pancakeSwapPairs {
+  id            Int               @id @default(autoincrement())
+  pair_contract String
+  base_symbol   Int
+  quote_symbol  Int
+  last_price    Float
+  lastUpdated   DateTime
+  base_token    pancakeSwapTokens @relation(fields: [base_symbol], references: [id])
+  quote_token   pancakeSwapTokens @relation("pancakeSwapPairs_quote_symbolTopancakeSwapTokens", fields: [quote_symbol], references: [id])
+
+  @@index([base_symbol], name: "base_token")
+  @@index([quote_symbol], name: "quote_token")
+}
+
+model pancakeSwapTokens {
+  id                                                                Int                @id @default(autoincrement())
+  name                                                              String
+  price                                                             Float
+  lastUpdated                                                       DateTime
+  pancakeSwapPairs                                                  pancakeSwapPairs[]
+  pancakeSwapPairs_pancakeSwapPairs_quote_symbolTopancakeSwapTokens pancakeSwapPairs[] @relation("pancakeSwapPairs_quote_symbolTopancakeSwapTokens")
+
+  @@index([name], name: "name")
+}
+
+model protocol_categories {
+  id                         Int                          @id @default(autoincrement())
+  name                       String                       @unique
+  protocol_category_relation protocol_category_relation[]
+}
+
+model protocol_category_relation {
+  id                  Int                 @id @default(autoincrement())
+  protocol_id         Int
+  category_id         Int
+  protocol_categories protocol_categories @relation(fields: [category_id], references: [id])
+  Protocols           Protocols           @relation(fields: [protocol_id], references: [id])
+
+  @@index([category_id], name: "category")
+  @@index([protocol_id], name: "protocol_cat")
+}
+
+model yearn_vaults {
+  id                    Int      @id @default(autoincrement())
+  tokenIcon             String
+  symbol                String
+  address               String?
+  name                  String   @unique
+  tokenName             String
+  tokenSymbol           String
+  strategyName          String
+  tokenAddress          String?
+  vaultIcon             String?
+  apy_tokenAddress      String?  @map("apy.tokenAddress")
+  apy_apyOneMonthSample Float    @map("apy.apyOneMonthSample")
+  apy_symbol            String   @map("apy.symbol")
+  apy_apyOneWeekSample  Float    @map("apy.apyOneWeekSample")
+  apy_description       String   @map("apy.description")
+  timestamp             DateTime @default(now())
+}
+
+enum Users_exp_equities {
+  never
+  few
+  some
+  many
+}
+
+enum Users_exp_crypto {
+  never
+  few
+  some
+  many
+}
+
+enum Users_exp_leveraged {
+  never
+  few
+  some
+  many
+}
+
+enum Users_farmer_knowledge {
+  professional
+  academicdegree
+  noknowledge
+  attendedcourses
+}

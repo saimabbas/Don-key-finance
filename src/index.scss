@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import "../public/assets/scss/variables.scss";
+
+@font-face {
+  font-family: "CodecPro-Bold";
+  src: local("CodecPro-Bold"),
+    url(./fonts/CodecPro/CodecPro-News.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ObjectSans-Bold";
+  src: local("ObjectSans-Bold"),
+    url(./fonts/object-sans/ObjectSans-Bold.otf) format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto" !important;
+  background: $primary-color;
+}
+
+div:focus {
+  outline: none;
+}
+
+.blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  box-sizing: initial;
+  pointer-events: none;
+}
+.blur-1 {
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+  box-sizing: initial;
+  pointer-events: none;
+}
+.blur-2 {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  box-sizing: initial;
+  pointer-events: none;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorBlack {
+  color: $colorBlack !important;
+}
+.headsame {
+  font-family: "ObjectSans-Bold";
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  color: $colorBlack;
+
+  /* media queries */
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+.parasame {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 132%;
+  display: flex;
+  align-items: center;
+  color: #222222;
+}
+.bgyellowColor {
+  background-color: $bgyellowColor;
+}
+
+.primary-text {
+  color: $bgyellowColor;
+}
+
+.bggeryColor {
+  background: $bggeryColor;
+}
+
+.btn.btnYellow:not(:disabled):not(.disabled).active,
+.btn.btnYellow:not(:disabled):not(.disabled):active,
+.show > .btn.btnYellow.dropdown-toggle {
+  background-color: $secondary-color;
+  border: 1px solid $secondary-color;
+  color: $colorBlack;
+}
+.pull-right {
+  float: right;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-buru {
+  background-color: #ffca00 !important;
+}
+
+.cardsBanner .card .advantage-img {
+  height: 265px;
+  display: block;
+  margin: 0 auto;
+}

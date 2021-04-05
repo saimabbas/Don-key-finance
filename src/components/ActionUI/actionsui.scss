@@ -1,0 +1,35 @@
+.action-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+.setbtn {
+    border: 1px solid #222222;
+    border-radius: 2px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: #fff;
+    font-weight: 500;
+    transition: all 0.3s;
+    &:hover {
+        background-color: #eaeaea;
+    }
+}
+
+.actionprop_info {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #C6C6C6;
+    display: flex;
+    justify-content: space-between;
+}
+
+.makerdao_info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #222;
+    font-weight: 500;
+
+}

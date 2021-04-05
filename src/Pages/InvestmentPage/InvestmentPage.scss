@@ -1,0 +1,23 @@
+.invest_card {
+    background: #000;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 4px;
+
+}
+.invest_card_btn {
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    border: 0;
+    font-weight: 700;
+    background-color: #FFDE61;
+    &:disabled {
+        background: #474747;
+        color: #848484;
+    }
+    &:focus {
+        outline: none;
+    }
+}

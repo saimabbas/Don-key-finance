@@ -1,0 +1,105 @@
+@import "../../../public/assets/scss/variables.scss";
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  & .loginImage {
+    left: 55vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45vw;
+    height: 100vh;
+    background-image: url("../../images/login/login.png");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-size: 100% 100%;
+    transition: left 300ms ease;
+  }
+}
+
+.loginLeft {
+  width: 50vw;
+  & .loginForm {
+    padding: 20px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 13%;
+    display: block;
+
+    /* media queries */
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1400px) {
+      width: 77%;
+      padding: 0px;
+      margin-top: 5%;
+    }
+  }
+  & h1 {
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 32px;
+    color: $colorBlack;
+    font-family: "ObjectSans-Bold";
+
+    /* media queries */
+    @media (max-width: 767px) {
+      font-size: 44px;
+    }
+  }
+  & p {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 133%;
+    color: $paracolorBlack;
+  }
+  & .form-control {
+    border: 1px solid #222222;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 16px;
+    height: 45px;
+  }
+  & .form-control::-webkit-input-placeholder {
+    color: $inputColor;
+  }
+
+  & .btn-outline1,
+  .btn-outline1:hover,
+  .btn-outline1:focus,
+  .btn-primary:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .show > .btn-primary.dropdown-toggle {
+    background: #fff;
+    border: 1px solid #a8a8a8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 11px;
+    text-align: left;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: $paracolorBlack;
+    box-shadow: none !important;
+
+    @media screen and (min-width: 768px) and (max-width: 1400px) {
+      font-size: 14px;
+    }
+  }
+
+  /* media queries */
+  @media (max-width: 767px) {
+    width: 100vw;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1400px) {
+    width: 55%;
+    padding: 0px;
+  }
+}

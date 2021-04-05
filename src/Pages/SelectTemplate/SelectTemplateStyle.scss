@@ -1,0 +1,86 @@
+@import "../../../public/assets/scss/variables.scss";
+.newStrategy {
+  background: $secondary-color;
+  opacity: 0.92;
+  padding: 20px 30px;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.newStrategyContent {
+  background: $primary-color;
+  box-shadow: 0px 3px 20px rgba(0, 18, 80, 0.13);
+  border-radius: 5px;
+  padding: 50px 30px;
+
+  /* media queries */
+  @media (min-width: 992px) {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  & h4 {
+    font-family: "ObjectSans-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 46px;
+    color: $colorBlack;
+  }
+}
+.cardStrategy {
+  background: $primary-color;
+  box-shadow: 0px 8px 30px rgba(4, 7, 26, 0.13),
+    8px 0px 30px rgba(4, 7, 26, 0.13);
+  border-radius: 5px;
+  padding: 19px;
+
+  & h5 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $colorBlack;
+    min-height: 30px;
+  }
+  & .strategyimg {
+    height: 148px;
+    overflow: hidden;
+    width: 100%;
+  }
+  & img {
+    max-width: 100%;
+  }
+
+  & p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 133%;
+    color: $paracolorBlack;
+  }
+
+  & .dark {
+    background: $colorBlack !important;
+    border-radius: 5px !important;
+    color: $primary-color !important;
+    padding: 10px 10px !important;
+  }
+  & .dark:hover {
+    background: $primary-color !important;
+    color: $colorBlack !important;
+  }
+  & .btnpadding {
+    padding: 10px 10px !important;
+  }
+  & .btnpadding:hover {
+    background: $colorBlack !important;
+    color: $primary-color !important;
+  }
+  & span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $colorBlack;
+    display: inline-block;
+  }
+}

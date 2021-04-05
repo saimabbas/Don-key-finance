@@ -1,0 +1,1 @@
+export const AuthToken = "AuthToken";

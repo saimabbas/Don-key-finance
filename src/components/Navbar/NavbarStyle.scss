@@ -1,0 +1,263 @@
+@import "../../../public/assets/scss/variables.scss";
+
+.nav-link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+}
+
+.btn.btn-outline,
+.btn.btn-outline:hover,
+.btn.btn-outline:active,
+.btn.btn-outline:focus,
+.btn-primary.btn-outline:not(:disabled):not(.disabled).active,
+.btn-primary.btn-outline:not(:disabled):not(.disabled):active,
+.show>.btn-primary.btn-outline.dropdown-toggle {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: 1px solid $colorBlack;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 12px 17px;
+
+  /* media queries */
+  @media (max-width: 767px) {
+    padding: 10px 13px;
+  }
+}
+button:disabled.btn-outline{
+  border: 1px solid rgba($color: $colorBlack, $alpha: 0.65) !important;
+}
+.bg-none {
+  background-color: transparent;
+}
+
+.navbar-nav .active {
+  font-weight: bold;
+  position: relative;
+}
+
+.dropNav1 {
+  display: inline-block;
+  margin-top: -4px;
+
+  & .btn,
+  .btn:hover,
+  .btn:active,
+  .btn:focus,
+  .btn-primary:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .show>.btn-primary.dropdown-toggle {
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none !important;
+  }
+
+  & .dropdown-toggle::after {
+    display: none;
+  }
+
+  & .dropdown-menu {
+    padding: 0px;
+    min-width: 21rem;
+    max-width: 21rem;
+    left: -90%;
+    margin-top: 39% !important;
+    border: none;
+
+    /* media queries */
+    @media (max-width: 767px) {
+      min-width: 17rem;
+      max-width: 17rem;
+      left: -200%;
+    }
+  }
+
+  & .notifyHead {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $primary-color;
+    background: #000000;
+    border-radius: 5px 5px 0px 0px;
+    padding: 15px;
+    position: relative;
+  }
+
+  & .notifyHead:before {
+    position: absolute;
+    content: "";
+    top: -8px;
+    background-image: url("../../images/dropangle.png");
+    left: 21%;
+    height: 9px;
+    width: 17px;
+
+    /* media queries */
+    @media (max-width: 767px) {
+      left: 52%;
+      right: auto;
+    }
+  }
+
+  & .dropdown-item,
+  .dropdown-item:hover {
+    background: $bggeryColor;
+    border-radius: 5px;
+    padding: 11px;
+    width: 92%;
+    margin: 15px auto;
+
+    & p {
+      white-space: normal;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      display: block;
+      align-items: center;
+      color: $colorBlack;
+      padding: 10px 11% 0px 0px;
+    }
+
+    & span {
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      color: $inputColor;
+      margin-bottom: 10px;
+    }
+  }
+
+  .viewDrop {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0px 20px;
+
+    & a,
+    a:hover {
+      color: $inputColor;
+      text-decoration: none;
+    }
+  }
+
+  /* media queries */
+  @media (max-width: 767px) {
+    margin-left: -14px;
+  }
+}
+.coming-soon {
+  position: absolute;
+  top: -25px;
+  left: 35px;
+}
+
+.navbar-nav .active:before {
+  border: 4px solid #222222;
+  position: absolute;
+  content: "";
+  bottom: -15px;
+  width: 25px;
+}
+
+.bgnav {
+  background-color: $secondary-color;
+}
+
+.btn.btnusername,
+.btn.btnusername:hover {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  color: $paracolorBlack;
+
+  border: 1px solid #222222;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px 17px;
+  width: 14%;
+
+  & span {
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    width: 75%;
+
+    /* media queries */
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: auto;
+    padding: 7px 10px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 20%;
+  }
+}
+
+.btn.btnusername--white {
+  color: #a8a8a8;
+  border: 1px solid #a8a8a8;
+
+  &:hover {
+    color: #a8a8a8;
+    border: 1px solid #a8a8a8;
+  }
+}
+
+.notification-icon {
+  width: 20px;
+}
+
+.user-icon {
+  width: 28px;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute !important;
+    top: 85%;
+    z-index: 999;
+    background: rgb(238, 238, 238);
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    padding: 5px 15px;
+  }
+
+  .navbar-light .navbar-toggler {
+    border: 0;
+    margin-left: auto;
+    margin-right: 0;
+    width: 15%;
+  }
+
+  button.navbar-toggler:focus {
+    outline: none !important;
+  }
+}
+
+.by-logo {
+  width: 150px;
+}
